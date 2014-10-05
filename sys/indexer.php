@@ -192,12 +192,13 @@ class Index {
         $HEADER_title = $HEADER_appconfig['WEB_TITLE'];
         $PAGE_TITLES = parse_ini_file(DIR::$CONFIG . 'page-titles.ini');
 
-        $pageTitle = '';
         if (array_key_exists($this->__GetPage(), $PAGE_TITLES))
         {
             $HEADER_title = $PAGE_TITLES[$this->__GetPage()];
-            PARAMS::Create('header_title', $HEADER_title);
         }
+        PARAMS::Create('header_title', $HEADER_title);
+        
+        // Render page
         $this->RenderPage(Index::__GetPage());
     }
 
