@@ -1,4 +1,5 @@
-fogs
+APHP
 ====
 
-FAITH Online Grading system (mini project for NETPRIN)
+Allen's PHP framework
+A framework for personal use only :)
